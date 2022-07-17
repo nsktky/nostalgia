@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> -->
     </nav>
     <router-view/>
+    <IndexBar />
   </div>
 </template>
 
@@ -30,3 +31,12 @@ nav {
   }
 }
 </style>
+
+<script>
+import IndexBar from '@/components/layouts/IndexBar'
+export default {
+  components: {
+    IndexBar
+  },
+}
+</script>
