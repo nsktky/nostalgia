@@ -1,9 +1,7 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar app
-      inverted-scroll
-      scroll-threshold="50"
-    >
+    <router-view class="router-view"/>
+    <v-app-bar app>
         <v-toolbar-title>
             <div class="title">nostalgia</div>
         </v-toolbar-title>
