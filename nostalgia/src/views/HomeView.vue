@@ -16,21 +16,25 @@ export default {
     "vue-p5": VueP5
   },
   data: () => ({
-    red: 100,
-    green: 100,
-    blue: 100
   }),
   computed: {
   },
   methods: {
     setup(sketch) {
       sketch.createCanvas(sketch.windowWidth, sketch.windowHeight);
-      sketch.background(this.red, this.green, this.blue);
+      sketch.background(0);
     },
     draw(sketch) {
-      sketch.fill(150);
-      sketch.noStroke();
-      sketch.circle(sketch.random(sketch.width), sketch.random(sketch.height), sketch.width*0.1);
+      sketch.push();
+      sketch.translate(sketch.width/2,sketch.height/sketch.random(1,5));
+      sketch.rotate(sketch.map(sketch.random(sketch.frameCount),0,1,0,360));
+      sketch.stroke(207, 168, 85, 30);
+      sketch.noFill();
+      sketch.rect(0, 0, sketch.width*0.1, sketch.width*0.1);
+      sketch.line(0, 0, sketch.width, sketch.height);
+      sketch.pop();
+      sketch.stroke(255);
+      sketch.text('nostalgia', sketch.width/2, sketch.height/2)
     },
   }
 };
