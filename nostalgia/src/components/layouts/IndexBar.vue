@@ -12,12 +12,19 @@
                 <router-link to="/"><div class="link">Home</div></router-link>
             </v-btn>
             <v-btn text>
-                <router-link to="/about" router-link-exact-active>
+                <router-link to="/art" router-link-exact-active>
+                    <div class="link">Art</div>
+                </router-link>
+            </v-btn>
+            <v-btn text>
+                <router-link to="/profile" router-link-exact-active>
                     <div class="link">Profile</div>
                 </router-link>
             </v-btn>
             <v-btn text>
-                <a href="https://twitter.com/home">Error</a>
+                <router-link to="/contact" router-link-exact-active>
+                    <div class="link">Contact</div>
+                </router-link>
             </v-btn>
         </v-toolbar-items>
     </v-app-bar>
