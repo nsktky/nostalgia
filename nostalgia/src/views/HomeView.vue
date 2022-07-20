@@ -19,12 +19,12 @@ export default {
      points : [],
      bar : [],
      barSize : [],
-     bars: 0
+     bars: 0,
   }),
   methods: {
     setup(sketch) {
       sketch.createCanvas(sketch.windowWidth, sketch.windowHeight);
-      this.bars = sketch.int(sketch.random(3, 6));
+      this.bars = sketch.int(sketch.random(4, 7));
       sketch.background(85, 0, 48);
       sketch.noiseDetail(4);
       sketch.angleMode(sketch.DEGREES);
@@ -49,7 +49,7 @@ export default {
       }
 
       sketch.textAlign(sketch.CENTER, sketch.CENTER);
-      sketch.textSize(sketch.width * 0.15);
+      sketch.textSize(sketch.width * 0.13);
     },
 
     draw(sketch) {
@@ -81,6 +81,10 @@ export default {
 
         sketch.circle(this.points[i].x+sketch.random(5), this.points[i].y+sketch.random(5), 5);
 
+        sketch.noStroke();
+        sketch.fill(91, 0, 37);
+        sketch.textStyle(sketch.BOLD);
+        sketch.text('NOSTALGIA', sketch.width/2, sketch.height/2)
         sketch.pop();
       }
 
@@ -90,14 +94,11 @@ export default {
         sketch.line(this.bar[i].x, this.bar[i].y,
           this.bar[i].x + this.barSize[i] * sketch.frameCount * 0.005,
           this.bar[i].y - this.barSize[i] * sketch.frameCount * 0.005);
-        sketch.stroke(250);
+        sketch.stroke(255);
+
         sketch.line(this.bar[i].x, this.bar[i].y,
           this.bar[i].x, this.bar[i].y - this.barSize[i]);
       }
-
-      sketch.noStroke();
-      sketch.fill(0);
-      sketch.text('NOSTALGIA', sketch.width/2, sketch.height/2)
     },
   }
 };
