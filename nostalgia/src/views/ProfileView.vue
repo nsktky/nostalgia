@@ -33,8 +33,10 @@
             >
               <v-avatar class="avatar"
                 color="primary"
-                size="100"
-              ></v-avatar>
+                size="200"
+              >
+                <img src="@/assets/ayame.png" alt="ayame">
+              </v-avatar>
               <div class="text">
                 <h1>{{ name }}</h1>
                 <div class="profile">
