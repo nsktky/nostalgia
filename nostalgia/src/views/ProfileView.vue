@@ -3,6 +3,44 @@
     <v-main class="grey lighten-3">
       <v-container class="container">
         <v-row>
+          <v-spacer>
+          </v-spacer>
+          <v-col
+            cols="10"
+            sm="5"
+          >
+            <v-sheet
+              min-height="70vh"
+              rounded="lg"
+              elevation="1"
+            >
+              <v-avatar class="avatar"
+                color="primary"
+                size="200"
+              >
+                <img src="@/assets/images/ayame.png" alt="ayame">
+              </v-avatar>
+              <div class="text">
+                <h1>{{ name }}</h1>
+                <div class="profile">
+                  <h2>Profile</h2>
+                  <ul>
+                    <li v-for="item in profiles" :key="item.profile">
+                      {{ item.profile }}
+                    </li>
+                  </ul>
+                  <h2>Links</h2>
+                  <ul>
+                    <a v-for="item in links" :key="item.link"
+                      v-bind:href="item.link">
+                      <li>{{ item.name }}</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </v-sheet>
+          </v-col>
+
           <v-col
             cols="10"
             sm="4"
@@ -19,42 +57,6 @@
                  href="https://twitter.com/ayame_takuya?ref_src=twsrc%5Etfw"
               >
               </a>
-            </v-sheet>
-          </v-col>
-
-          <v-col
-            cols="10"
-            sm="6"
-          >
-            <v-sheet
-              min-height="70vh"
-              rounded="lg"
-              elevation="1"
-            >
-              <v-avatar class="avatar"
-                color="primary"
-                size="200"
-              >
-                <img src="@/assets/ayame.png" alt="ayame">
-              </v-avatar>
-              <div class="text">
-                <h1>{{ name }}</h1>
-                <div class="profile">
-                  <h2>Profile</h2>
-                  <ul class="msg-wrapper">
-                    <li v-for="item in profiles" :key="item.profile">
-                      {{ item.profile }}
-                    </li>
-                  </ul>
-                  <h2>Links</h2>
-                  <ul class="msg-wrapper">
-                    <a v-for="item in links" :key="item.link"
-                      v-bind:href="item.link">
-                      <li>{{ item.name }}</li>
-                    </a>
-                  </ul>
-                </div>
-              </div>
             </v-sheet>
           </v-col>
         </v-row>
