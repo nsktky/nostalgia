@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-main>
+    <v-main class="grey lighten-3">
       <v-container>
         <v-row justify="center" align-content="center">
             <!-- v-forでimagesの各要素をitemに格納 -->

@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-main>
+    <v-main class="grey lighten-3">
       <v-container class="container">
         <v-row justify="center" align-content="center">
           <v-col sm="8">
