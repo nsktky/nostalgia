@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ProfileView from '../views/ProfileView.vue'
 import ArtView from '../views/ArtView.vue'
 import ContactView from '../views/ContactView.vue'
 
@@ -15,10 +16,7 @@ const routes = [
   {
     path: '/profile',
     name: 'profile',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ProfileView.vue')
+    component: ProfileView
   },
   {
     path: '/art',

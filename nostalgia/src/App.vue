@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- 全コンテンツでbar表示 -->
     <IndexBar />
   </div>
 </template>
@@ -21,6 +22,7 @@
 a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration:none;
 
   &.router-link-exact-active {
     color: #42b983;

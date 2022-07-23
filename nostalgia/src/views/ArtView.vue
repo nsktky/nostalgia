@@ -3,11 +3,13 @@
     <v-main>
       <v-container>
         <v-row justify="center" align-content="center">
+            <!-- v-forでimagesの各要素をitemに格納 -->
           <v-col
             v-for="item in images" :key="item.src"
             sm="5"
           >
             <v-card  height="90vh">
+                <!-- itemsから表示するデータを取り出す -->
                 <v-img :src="item" height="80vh"></v-img>
                 <a v-bind:href="item.link">
                     <p class="title">
@@ -25,6 +27,7 @@
 <script>
   export default {
       data: () => ({
+    //   画像のpath,タイトル,NEORTのリンク.画像はassetsに格納しているためsrcにrequire()で渡す.
       images: [
         {src: require('@/assets/images/art1.jpg'),
          title: 'フレームワーク',
@@ -53,6 +56,9 @@
         {src: require('@/assets/images/art9.jpg'),
          title: '還魂',
          link: 'https://neort.io/art/ca91p843p9fbkmo5s490?index=55&origin=user_profile'},
+        {src: require('@/assets/images/art10.jpg'),
+         title: 'オノマトペ',
+         link: 'https://neort.io/art/c7ud6mk3p9fclnoe052g?index=169&origin=user_profile'},
       ]
     }),
   }

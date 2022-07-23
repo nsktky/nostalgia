@@ -2,16 +2,15 @@
   <v-app id="inspire">
     <v-main class="grey lighten-3">
       <v-container class="container">
-        <v-row>
-          <v-col sm="1"></v-col>
+        <v-row justify="center" align-content="center">
           <v-col sm="6">
             <v-sheet
               min-height="70vh"
               rounded="lg"
               elevation="1"
             >
+            <!-- プロフィール画像 -->
               <v-avatar class="avatar"
-                color="primary"
                 size="200"
               >
                 <img src="@/assets/images/ayame.png" alt="ayame">
@@ -21,6 +20,7 @@
                 <div class="profile">
                   <h2>Profile</h2>
                   <ul>
+                    <!-- v-forでdataの各配列から要素をitemに格納 -->
                     <li v-for="item in profiles" :key="item.profile">
                       {{ item.profile }}
                     </li>
@@ -43,6 +43,7 @@
               min-height="70vh"
               elevation="1"
             >
+            <!-- twitterを埋め込み. -->
               <a class="twitter-timeline" data-height="70vh"
                  data-lang="ja"
                  data-dnt="true"
@@ -52,7 +53,6 @@
               </a>
             </v-sheet>
           </v-col>
-          <v-col sm="1"></v-col>
         </v-row>
       </v-container>
     </v-main>
@@ -61,6 +61,7 @@
 
 <script>
   export default {
+    // プロフィールとして,名前,活動,各linkを配列に格納
     data: () => ({
       name : '@ayame_takuya',
       profiles : [

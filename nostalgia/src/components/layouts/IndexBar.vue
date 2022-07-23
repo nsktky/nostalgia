@@ -2,9 +2,11 @@
   <v-app id="inspire">
     <router-view class="router-view"/>
     <v-app-bar app>
-        <v-toolbar-title>
-            <div class="title">nostalgia</div>
+        <!-- タイトル -->
+        <v-toolbar-title class="title">
+            nostalgia
         </v-toolbar-title>
+        <!-- barにコンテンツのリンクを配置 -->
         <v-toolbar-items>
             <v-btn text to="/" router-link-exact-active>
                 <div class="link">Home</div>
@@ -31,13 +33,7 @@
 </script>
 
 <style>
-a {
-  text-decoration: none;
-}
 .title{
     padding: 1.5rem;
-}
-.link{
-    color: #2c3e50;
 }
 </style>
