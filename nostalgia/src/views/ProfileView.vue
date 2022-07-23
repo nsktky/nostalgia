@@ -3,12 +3,8 @@
     <v-main class="grey lighten-3">
       <v-container class="container">
         <v-row>
-          <v-spacer>
-          </v-spacer>
-          <v-col
-            cols="10"
-            sm="5"
-          >
+          <v-col sm="1"></v-col>
+          <v-col sm="6">
             <v-sheet
               min-height="70vh"
               rounded="lg"
@@ -41,10 +37,7 @@
             </v-sheet>
           </v-col>
 
-          <v-col
-            cols="10"
-            sm="4"
-          >
+          <v-col sm="4">
             <v-sheet
               rounded="lg"
               min-height="70vh"
@@ -59,6 +52,7 @@
               </a>
             </v-sheet>
           </v-col>
+          <v-col sm="1"></v-col>
         </v-row>
       </v-container>
     </v-main>
@@ -75,10 +69,10 @@
         { profile: 'Stuffed Artists' },
       ],
       links : [
-        { link: 'https://www.tobugeki.com/',
-          name: '飛ぶ劇場'},
         { link: 'https://neort.io/@IWD3ncMyhLhqMb7dInMwosr9Yw92',
           name: 'NEORT'},
+        { link: 'https://www.tobugeki.com/',
+          name: '飛ぶ劇場'},
         { link: 'https://www.youtube.com/channel/UCzjFj4kBiXPT17eUldj2YqA',
           name: 'youtube'},
         { link: 'https://twitter.com/ayame_takuya',
@@ -107,7 +101,8 @@
 }
 .profile {
   padding: 2rem;
-  text-align: left;
+  display: inline-block;
+  text-align: center;
 }
 .profile h2 {
   margin-top: 1rem;
